@@ -1,63 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOODIE</title>
-    <!--Linking font awesome for icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="icon" href="foodiee.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!--HEADER / NAVBAR-->
-    <header>
-    <nav class="navbar section-content">
-        <a href="#" class="nav-logo">
-            <h2 class="logo-text">😋FOODIE</h2>
-        </a>
-        <ul class="nav-menu">
-            <button id="menu-close-button" class="fas fa-times"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bun Kebab</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.svg" alt="simply recipes" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="tags.html" class="nav-link"> tags </a>
+          <a href="recipes.html" class="nav-link"> recipes </a>
 
-            <li class="nav-item">
-                <a href="#" class="nav-link">HOME</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-        </ul>
-
-        <button id="menu-open-button" class="fas fa-bars"></button>
+          <div class="nav-link contact-link">
+            <a href="contact.html" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
     </nav>
-    </header>
-
-    <main>
-        <section class="hero-section">
-            <div class="section-content">
-                <div class="hero-details">
-                    <h2 class="title">😋FOODIE.</h2>
-                    <h3 class="subtitile">Browse our collection and start cooking today.</h3>
-                    <p class="description">Are you passionate about food and looking for the perfect recipe? You've come to the right place! We’re your ultimate destination for a wide variety of recipes — from quick and easy meals to gourmet delights.</p>
-                    <div class="buttons">
-                      <a href="#" class="button">Contact us</a>
-                    </div>
-                </div>
-                <div class="hero-image-wrapper">
-                    <img src="food (1).png" alt="recipe?" class="hero-image">
-                </div>
-            </div>
-        </section>
+    <!-- end of nav -->
+    <!-- main -->
+    <main class="page">
+      <!-- header -->
+      <header class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>BUN KEBAB</h1>
+            <h4>no fluff, just recipes</h4>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+      <section class="recipes-container">
+        <!-- tag container -->
+        <div class="tags-container">
+          <h4>recipes</h4>
+          <div class="tags-list">
+            <a href="tag-template.html">Chicken (1)</a>
+            <a href0="tag-template.html">Breakfast (2)</a>
+            <a href="tag-template.html">Carrots (3)</a>
+            <a href="tag-template.html">Food (4)</a>
+          </div>
+        </div>
+        <!-- end of tag container -->
+        <!-- recipes list -->
+        <div class="recipes-list">
+          <!-- single recipe -->
+          <a href="single-recipe.html" class="recipe">
+            <img
+              src="./assets/recipes/Chicken-Biryani-Recipe.jpg"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Chicken Biryani</h5>
+            <p>Prep : 30-40 min | Cook : 45-60 min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="single-recipe.html" class="recipe">
+            <img
+              src="./assets/recipes/chicken-korma.jpg"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Chicken Korma</h5>
+            <p>Prep : 20-25 min | Cook : 45-60 min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="single-recipe.html" class="recipe">
+            <img
+              src="./assets/recipes/chicken karahi.jpg"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Chicken Karahi</h5>
+            <p>Prep : 20-25 min | Cook : 20-25 min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="single-recipe.html" class="recipe">
+            <img
+              src="./assets/recipes/recipe-4.jpeg"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Banana Pancakes</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="single-recipe.html" class="recipe">
+            <img
+              src="./assets/recipes/recipe-4.jpeg"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Banana Pancakes</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="single-recipe.html" class="recipe">
+            <img
+              src="./assets/recipes/recipe-4.jpeg"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Banana Pancakes</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+        </div>
+        <!-- end of recipes list -->
+      </section>
     </main>
-
-    <script src="script.js"></script>
-</body>
+    <!-- end of main -->
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">Bun Kebab</span>
+        <a href="#"> Built by Daniyal, Rafay And Muiz.</a>
+      </p>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
