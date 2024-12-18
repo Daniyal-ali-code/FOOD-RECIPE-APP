@@ -164,7 +164,148 @@
            <p>Prep : 15-20 min | Cook : 2-3 hr</p>
            </a>
            <!-- end of single recipe -->
-         </div>
+           <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 20px;
+            }
+        
+            .recipe-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+            }
+        
+            .recipe-card {
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              padding: 16px;
+              width: 250px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              cursor: pointer;
+              text-align: center;
+            }
+        
+            .recipe-card img {
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+              border-radius: 8px 8px 0 0;
+            }
+        
+            .add-recipe-btn {
+              background-color: #28a745;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              margin-bottom: 20px;
+            }
+        
+            .add-recipe-btn:hover {
+              background-color: #218838;
+            }
+        
+            #recipe-form-container {
+              display: none;
+              background-color: #f8f9fa;
+              padding: 20px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              margin-bottom: 20px;
+            }
+        
+            #recipe-form label {
+              display: block;
+              margin-bottom: 8px;
+              font-weight: bold;
+            }
+        
+            #recipe-form input, #recipe-form textarea {
+              width: 100%;
+              padding: 8px;
+              margin-bottom: 16px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+        
+            #recipe-form button {
+              background-color: #007bff;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+        
+            #recipe-form button:hover {
+              background-color: #0056b3;
+            }
+          </style>
+        </head>
+        <body>
+          <button class="add-recipe-btn">Add a Recipe</button>
+        
+          <div id="recipe-form-container">
+            <form id="recipe-form">
+              <label for="recipe-title">Recipe Title:</label>
+              <input type="text" id="recipe-title" placeholder="Enter recipe title" required>
+        
+              <label for="recipe-image">Recipe Image URL:</label>
+              <input type="text" id="recipe-image" placeholder="Enter image URL" required>
+        
+              <label for="recipe-description">Description:</label>
+              <textarea id="recipe-description" placeholder="Enter recipe description" rows="4" required></textarea>
+        
+              <button type="submit">Save Recipe</button>
+            </form>
+          </div>
+        
+          <div class="recipe-container" id="recipe-container">
+            <!-- Recipe cards will be added here dynamically -->
+          </div>
+        
+          <script>
+            const addRecipeBtn = document.querySelector('.add-recipe-btn');
+            const recipeFormContainer = document.getElementById('recipe-form-container');
+            const recipeForm = document.getElementById('recipe-form');
+            const recipeContainer = document.getElementById('recipe-container');
+        
+            // Toggle the visibility of the recipe form
+            addRecipeBtn.addEventListener('click', () => {
+              recipeFormContainer.style.display = recipeFormContainer.style.display === 'none' ? 'block' : 'none';
+            });
+        
+            // Handle the form submission
+            recipeForm.addEventListener('submit', (event) => {
+              event.preventDefault(); // Prevent page reload
+        
+              // Get form values
+              const title = document.getElementById('recipe-title').value;
+              const imageUrl = document.getElementById('recipe-image').value;
+              const description = document.getElementById('recipe-description').value;
+        
+              // Create a new recipe card
+              const recipeCard = document.createElement('div');
+              recipeCard.className = 'recipe-card';
+              recipeCard.innerHTML = `
+                <img src="${imageUrl}" alt="${title}">
+                <h3>${title}</h3>
+                <p>${description}</p>
+              `;
+        
+              // Add the new recipe card to the container
+              recipeContainer.appendChild(recipeCard);
+        
+              // Reset the form
+              recipeForm.reset();
+        
+              // Hide the form
+              recipeFormContainer.style.display = 'none';
+            });
+          </script>
+                 </div>
        <!-- end of recipes list -->
       </section>
     </main>
@@ -178,5 +319,6 @@
       </p>
     </footer>
     <script src="./js/app.js"></script>
+
   </body>
 </html>
