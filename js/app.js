@@ -1,4 +1,4 @@
-const getElement = (selector) => {
+  const getElement = (selector) => {
   const element = document.querySelector(selector)
 
   if (element) return element
@@ -17,3 +17,6 @@ navBtnDOM.addEventListener('click', () => {
 const date = getElement('#date')
 const currentYear = new Date().getFullYear()
 date.textContent = currentYear
+
+
+// Add a recipe button:
